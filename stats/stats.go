@@ -5,6 +5,7 @@ import (
     "fmt"
     "sync"
     "time"
+    "log"
 )
 
 type Stats struct {
@@ -38,6 +39,9 @@ func (s *Stats) Report(elapsed time.Duration) {
     avg := time.Duration(0)
     if s.total > 0 {
         avg = s.totalTime / time.Duration(s.total)
+    }
+    if avg <= 0 {
+        log.Fatal("\nНе удалось рассчитать среднее время ответа или подключиться к серверу\nПроверьте подключение и повторите попытку\n")
     }
 
     fmt.Printf("Total Requests: %d\n", s.total)
