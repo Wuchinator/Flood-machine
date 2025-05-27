@@ -1,9 +1,9 @@
 
 # Flood-машина
 
-Проект написан на чистом go под воодушевлением [этого](https://youtu.be/zXM7ZbOF-MU?si=awFsQ2Z6ne6e84fS) видео.
+Проект написан на чистом go под воодушевлением [этого](https://youtu.be/zXM7ZbOF-MU?si=awFsQ2Z6ne6e84fS) видео за 1 вечер под пиво.
 
-## Параметры запуска
+## Пример запуска
 
 ```bash
 go run main.go --url http://localhost:8080 --threads 50 --rpt 1000 --timeout 3s --delay 100ms
